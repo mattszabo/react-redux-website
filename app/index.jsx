@@ -15,7 +15,7 @@ import ReactDOM         from 'react-dom';
 import { Provider }     from 'react-redux';
 import { createStore }  from 'redux';
 
-import todoApp          from './reducers';
+import todoApp          from './reducers/Todo';
 import App              from './components/App';
 
 import './styles/main.css';

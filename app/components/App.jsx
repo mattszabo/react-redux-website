@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, hashHistory, Redirect, Route } from 'react-router';
 
 import Layout from './Layout/Layout';
-import TodoApp from './TodoApp';
+import TodoApp from './Todo/TodoApp';
 
 const app = (
   <Router history={hashHistory}>
