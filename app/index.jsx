@@ -20,10 +20,11 @@ import App              from './components/App';
 
 import './styles/main.css';
 
-let store = createSotre(todoApp);
+let store = createStore(todoApp);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />, document.getElementById('app')
-  </Provider>
+    <App />
+  </Provider>,
+  document.getElementById('app')
 );

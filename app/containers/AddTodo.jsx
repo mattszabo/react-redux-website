@@ -25,6 +25,11 @@ let AddTodo = ({ dispatch }) => {
     </div>
   )
 }
+
+AddTodo.propTypes = {
+  dispatch: React.PropTypes.func
+}
+
 AddTodo = connect()(AddTodo)
 
 export default AddTodo
