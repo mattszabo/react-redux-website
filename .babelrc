@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "env": {
+    "start": {
+      "presets": [
+        "react-hmre"
+      ]
+    },
+    "build": {
+      "plugins": ["transform-react-constant-elements"] 
+    }
+  }
+}
+
