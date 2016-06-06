@@ -6,9 +6,9 @@ import TodoApp from './TodoApp';
 
 const app = (
   <Router history={hashHistory}>
-    <Redirect from="/" to="/todolist" />
+    <Redirect from="/" to="/layout" />
     <Route path="/" component={Layout}>
-      <Route path="todolist" component={TodoApp} />
+      <Route path="home" component={TodoApp} />
     </Route>
   </Router>
 );
