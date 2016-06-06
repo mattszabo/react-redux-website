@@ -9,7 +9,7 @@ const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
-  // release: path.join(__dirname, 'build', 'release'),
+  release: path.join(__dirname, 'build', 'release'),
   styles: path.join(__dirname, 'app', 'styles')
 };
 
@@ -23,7 +23,7 @@ const common = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
-    path: PATHS.build,
+    path: PATHS.release,
     filename: 'bundle.js'
   },
 
