@@ -7,11 +7,16 @@
     "start": {
       "presets": [
         "react-hmre"
+      ],
+      "plugins": [
+        "transform-object-rest-spread"
       ]
     },
     "build": {
-      "plugins": ["transform-react-constant-elements"] 
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-object-rest-spread"
+      ]
     }
   }
 }
-
