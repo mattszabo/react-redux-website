@@ -12,12 +12,19 @@
 
 import React            from 'react';
 import ReactDOM         from 'react-dom';
+import { Provider }     from 'react-redux';
+import { createStore }  from 'redux';
 
+import todoReducer      from './reducers/TodoApp/todoReducer';
 import App              from './components/App';
 
 import './styles/main.css';
 
+let store = createStore(todoReducer);
+
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('app')
 );
