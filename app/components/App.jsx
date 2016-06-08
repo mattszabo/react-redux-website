@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, hashHistory, Redirect, Route } from 'react-router';
 
 import Layout from './Layout/Layout';
-import TodoApp from './TodoApp/TodoApp';
+import TodoApp from '../TodoApp/components/TodoApp';
 import Home from './Home/Home';
 
 const app = (
