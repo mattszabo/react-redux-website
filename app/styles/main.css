@@ -10,3 +10,8 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li, a {
 .todoApp {
   text-align: center;
 }
+
+.navbar li {
+  display: inline-block;
+  padding: 10px
+}
