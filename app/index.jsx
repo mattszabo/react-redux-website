@@ -15,12 +15,12 @@ import ReactDOM         from 'react-dom';
 import { Provider }     from 'react-redux';
 import { createStore }  from 'redux';
 
-import todoApp          from './reducers';
+import todoReducer      from './reducers/TodoApp/todoReducer';
 import App              from './components/App';
 
 import './styles/main.css';
 
-let store = createStore(todoApp);
+let store = createStore(todoReducer);
 
 ReactDOM.render(
   <Provider store={store}>
