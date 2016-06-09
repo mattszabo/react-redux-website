@@ -1,6 +1,6 @@
-export const toggleTodo = (id) => {
+export const updateSelection = (id) => {
   return {
-    type: 'TOGGLE_TODO',
+    type: 'UPDATE_SELECTION',
     id
   }
 }

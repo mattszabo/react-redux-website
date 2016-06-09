@@ -13,14 +13,18 @@
 import React            from 'react';
 import ReactDOM         from 'react-dom';
 import { Provider }     from 'react-redux';
-import { createStore }  from 'redux';
+import { createStore, combineReducers }  from 'redux';
 
 import todoReducer      from './src/TodoApp/reducers/todoReducer';
+import navbarLinks      from './src/Navbar/reducers/NavbarLinks'
 import App              from './src/App';
 
 import './styles/main.css';
 
-let store = createStore(todoReducer);
+let store = createStore(combineReducers({
+  todoReducer,
+  navbarLinks
+}));
 
 ReactDOM.render(
   <Provider store={store}>

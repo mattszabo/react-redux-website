@@ -1,11 +1,9 @@
 import React from 'react'
+import NavbarLinkList from '../containers/NavbarLinkList'
 
 const Navbar = () => (
   <div className='navbar'>
-    <ul>
-      <li>Home</li>
-      <li>TodoApp</li>
-    </ul>
+    <NavbarLinkList />
   </div>
 );
 
