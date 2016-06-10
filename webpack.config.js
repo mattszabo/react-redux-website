@@ -50,6 +50,10 @@ const common = {
         // Parse only app files! Without this it will go through entire project.
         // In addition to being slow, that will most likely result in an error.
         include: PATHS.app
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
   }
@@ -89,7 +93,7 @@ switch(process.env.npm_lifecycle_event) {
       },
 
       devServer: {
-        contentBase: PATHS.build,
+        contentBase: PATHS.release,
 
         // Enable history API fallback so HTML5 History API based
         // routing works. This is a good default that will come

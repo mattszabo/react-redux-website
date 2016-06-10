@@ -9,10 +9,13 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li, a {
 .todoApp {
   text-align: center;
 }
-.navbar li {
-  display: inline-block;
-  margin-right: 10px;
-}
-.navbar li:last-child {
-  margin-right: 0;
+.navbar {
+  text-align: center;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
