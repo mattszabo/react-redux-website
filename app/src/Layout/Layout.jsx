@@ -7,7 +7,7 @@ export default class Layout extends React.Component {
       <div className='layout'>
         <div className='navbar'>
           <ul>
-            <li>Homed</li>
+            <li>Home</li>
             <li>Todo</li>
             <li>About</li>
           </ul>
