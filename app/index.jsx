@@ -31,6 +31,7 @@ let store = createStore(NavbarSelection);
 import { setNavbarLink } from './src/Navbar/actions/NavbarActions'
 
 // Log the initial state
+console.log('store.getState()')
 console.log(store.getState())
 
 // Every time the state changes, log it

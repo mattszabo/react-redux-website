@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react'
-import NavbarLinkState from '../containers/NavbarLinkState'
+import NavbarLink from '../containers/NavbarLink'
 
 const NavbarLinks = ({ navbarLinks, onNavbarClick }) => (
   <div className='navbar'>
     <ul>
       {navbarLinks.map(navbarLink =>
-        <NavbarLinkState
+        <NavbarLink
           key={navbarLink.id}
           {...navbarLink}
           onclick={() => onNavbarClick(navbarLink.id)}

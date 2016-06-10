@@ -18,9 +18,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const NavbarLinkState = connect(
+const NavbarLink = connect(
   mapStateToProps,
   mapDispatchToProps
 )(ActiveLink)
 
-export default NavbarLinkState
+export default NavbarLink
