@@ -15,8 +15,8 @@ import ReactDOM         from 'react-dom';
 import { Provider }     from 'react-redux';
 // import { createStore, combineReducers }  from 'redux';
 import { createStore }  from 'redux';
-import todoReducer      from './src/TodoApp/reducers/todoReducer';
-// import NavbarSelection      from './src/Navbar/reducers/NavbarSelection'
+// import todoReducer      from './src/TodoApp/reducers/todoReducer';
+import NavbarSelection      from './src/Navbar/reducers/NavbarSelection'
 import App              from './src/App';
 
 import './styles/main.css';
@@ -26,26 +26,26 @@ import './styles/main.css';
 //   todoReducer
 // }));
 
-let store = createStore(todoReducer);
+let store = createStore(NavbarSelection);
 
-// import { setNavbarLink } from './src/Navbar/actions/NavbarActions'
-//
-// // Log the initial state
-// console.log(store.getState())
-//
-// // Every time the state changes, log it
-// // Note that subscribe() returns a function for unregistering the listener
-// let unsubscribe = store.subscribe(() =>
-//   console.log(store.getState())
-// )
-//
-// // Dispatch some actions
-// store.dispatch(setNavbarLink('1 - /HOME'))
-// store.dispatch(setNavbarLink('3 - /ABOUT'))
-// store.dispatch(setNavbarLink('2 - /TODO'))
-//
-// // Stop listening to state updates
-// unsubscribe()
+import { setNavbarLink } from './src/Navbar/actions/NavbarActions'
+
+// Log the initial state
+console.log(store.getState())
+
+// Every time the state changes, log it
+// Note that subscribe() returns a function for unregistering the listener
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+)
+
+// Dispatch some actions
+store.dispatch(setNavbarLink('1 - /HOME'))
+store.dispatch(setNavbarLink('3 - /ABOUT'))
+store.dispatch(setNavbarLink('2 - /TODO'))
+
+// Stop listening to state updates
+unsubscribe()
 
 ReactDOM.render(
   <Provider store={store}>

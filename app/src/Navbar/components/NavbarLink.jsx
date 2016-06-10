@@ -1,12 +1,22 @@
-import React from 'react'
-import ActiveLink from '../../common/components/ActiveLink'
+import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
 
-const NavbarLink = () => (
-  <div>
-    <li>
-
-    </li>
-  </div>
+const NavbarLink = ({ onClick, active, text, url }) => (
+  <li
+    onClick={onClick}
+    style={{
+      className: active ? 'active' : ''
+    }}
+  >
+    <Link to={url}>{text}</Link>
+  </li>
 )
+
+NavbarLink.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  active: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+}
 
 export default NavbarLink

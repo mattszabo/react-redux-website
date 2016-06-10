@@ -9,8 +9,8 @@ const app = (
   <Router history={hashHistory}>
     <Redirect from="/" to="/todoapp" />
     <Route path="/" component={Layout}>
-      <Route path="home" component={TodoApp} />
-      <Route path="todoapp" component={Home} />
+      <Route path="home" component={Home} />
+      <Route path="todoapp" component={TodoApp} />
     </Route>
   </Router>
 );

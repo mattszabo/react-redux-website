@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from '../Navbar/components/Navbar'
+import NavbarApp from '../Navbar/components/NavbarApp'
 
 export default class Layout extends React.Component {
   render() {
     return (
       <div className='layout'>
-        <Navbar />
+        <NavbarApp />
         <div className='content'>
           {this.props.children}
         </div>
