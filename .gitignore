@@ -9,8 +9,7 @@ pids
 *.pid
 *.seed
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/release
+build/release/bundle*
 
 # Dependency directory
 node_modules
