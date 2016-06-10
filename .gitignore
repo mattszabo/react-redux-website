@@ -10,6 +10,7 @@ pids
 *.seed
 
 build/release/bundle*
+build/release/style*
 
 # Dependency directory
 node_modules
