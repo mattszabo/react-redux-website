@@ -15,8 +15,8 @@ import ReactDOM         from 'react-dom';
 import { Provider }     from 'react-redux';
 // import { createStore, combineReducers }  from 'redux';
 import { createStore }  from 'redux';
-// import todoReducer      from './src/TodoApp/reducers/todoReducer';
-import NavbarSelection      from './src/Navbar/reducers/NavbarSelection'
+import todoReducer      from './src/TodoApp/reducers/todoReducer';
+// import NavbarSelection      from './src/Navbar/reducers/NavbarSelection'
 import App              from './src/App';
 
 import './styles/main.css';
@@ -26,7 +26,7 @@ import './styles/main.css';
 //   todoReducer
 // }));
 
-let store = createStore(NavbarSelection);
+let store = createStore(todoReducer);
 
 import { setNavbarLink } from './src/Navbar/actions/NavbarActions'
 
