@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 const validate = require('webpack-validator');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 
@@ -53,11 +54,16 @@ const common = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        // loaders: ['style', 'css', 'sass']
+        loader: ExtractTextPlugin.extract('css!sass')
       }
     ]
-  }
-
+  },
+  plugins: [
+    new ExtractTextPlugin('style.css', {
+        allChunks: true
+    })
+  ]
 };
 
 var config;

@@ -16,6 +16,7 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li, a {
     margin-right: 20px;
     &:last-child {
       margin-right: 0;
+      border: 1px solid black;
     }
   }
 }
