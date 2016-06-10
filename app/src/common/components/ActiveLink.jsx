@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-const ActiveLink = ({ active, children, onClick }) => {
+const ActiveLink = ({ active, children, onClick, url='#' }) => {
   if (active) {
     return <span>{children}</span>
   }
 
   return (
-    <Link to="#"
+    <Link to={url}
        onClick={e => {
          e.preventDefault()
          onClick()
@@ -21,7 +21,8 @@ const ActiveLink = ({ active, children, onClick }) => {
 ActiveLink.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  url: PropTypes.string
 }
 
 export default ActiveLink

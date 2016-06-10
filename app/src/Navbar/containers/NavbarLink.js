@@ -1,17 +1,17 @@
 import { connect } from 'react-redux'
+import { setNavbarLink } from '../actions/NavbarActions'
 import ActiveLink from '../../common/components/ActiveLink'
-import { updateSelection } from '../actions/NavbarActions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    active: ownProps.active === state.activeId
+    active: ownProps.filter === state.navbarFilter
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onNavbarLinkClick: (id) => {
-      dispatch(updateSelection(id))
+    onClick: () => {
+      dispatch(setNavbarLink(ownProps.link))
     }
   }
 }

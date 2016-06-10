@@ -1,6 +1,7 @@
-export const updateSelection = (id) => {
+//onClick
+export const setNavbarLink = (id) => {
   return {
-    type: 'UPDATE_SELECTION',
+    type: 'SET_NAVBAR_LINK',
     id
   }
 }
