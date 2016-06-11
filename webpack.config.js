@@ -55,7 +55,7 @@ const common = {
       {
         test: /\.scss$/,
         // loaders: ['style', 'css', 'sass']
-        loader: ExtractTextPlugin.extract('css!sass')
+        loader: ExtractTextPlugin.extract('css!sass?indentedSyntax=true')
       }
     ]
   },
