@@ -53,8 +53,11 @@ const common = {
         include: PATHS.app
       },
       {
+        test: /\.sass$/,
+        loader: ExtractTextPlugin.extract('css!sass?indentedSyntax=true')
+      },
+      {
         test: /\.scss$/,
-        // loaders: ['style', 'css', 'sass']
         loader: ExtractTextPlugin.extract('css!sass')
       }
     ]

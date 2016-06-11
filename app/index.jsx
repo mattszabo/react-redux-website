@@ -19,7 +19,7 @@ import todoReducer      from './src/TodoApp/reducers/todoReducer';
 // import NavbarSelection      from './src/Navbar/reducers/NavbarSelection'
 import App              from './src/App';
 
-import './styles/main.scss';
+import './styles/main.sass';
 
 // let store = createStore(combineReducers({
 //   NavbarFilter,
