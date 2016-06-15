@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
-// import Counter from './src/Counter/components/Counter'
+import { createStore, combineReducers } from 'redux'
 import counter from './src/Counter/reducers'
-// import todoReducer from './src/TodoApp/reducers/todoReducer'
+import counterEven from './src/CounterEven/reducers'
 import App from './src/App'
 
-const store = createStore(counter)
+const store = createStore(combineReducers({counter, counterEven}))
 
 function render() {
   ReactDOM.render(
