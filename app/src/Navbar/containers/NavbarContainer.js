@@ -1,9 +1,8 @@
 import { connect } from 'react-redux'
 import NavbarLink from '../components/NavbarLink'
+import updateSelection from '../actions/NavbarActions'
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('stuff')
-  console.log(state)
   return {
     active: ownProps.id === state.navbar
   }
@@ -11,10 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onNavbarClick: () => dispatch({
-      type: 'UPDATE_SELECTION',
-      id: ownProps.id
-    })
+    onNavbarClick: () => dispatch(updateSelection(ownProps.id))
   }
 }
 
