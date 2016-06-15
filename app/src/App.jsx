@@ -4,6 +4,8 @@ import CounterEven from './CounterEven/components/CounterEven'
 
 export default class App extends React.Component {
   render() {
+    const { store } = this.context;
+    console.log(store)
     return(
       <div>
         <Counter
