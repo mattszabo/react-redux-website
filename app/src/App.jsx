@@ -3,7 +3,7 @@ import CounterApp from './Counter/components/CounterApp';
 import CounterEvenApp from './CounterEven/components/CounterEvenApp';
 
 const App = () => (
-  <div>
+  <div className='app'>
     <CounterApp />
     <CounterEvenApp />
   </div>

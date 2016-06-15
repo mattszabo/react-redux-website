@@ -7,6 +7,8 @@ import counter from './src/Counter/reducers'
 import counterEven from './src/CounterEven/reducers'
 import App from './src/App'
 
+import './styles/main.sass'
+
 const store = createStore(combineReducers({counter, counterEven}))
 
 function render() {
