@@ -12,7 +12,7 @@ const store = createStore(combineReducers({counter, counterEven}))
 function render() {
   ReactDOM.render(
     <Provider store={store}>
-      <App store={store} />
+      <App />
     </Provider>,
     document.getElementById('app')
   )
