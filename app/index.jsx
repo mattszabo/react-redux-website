@@ -7,14 +7,11 @@ import counter from './src/Counter/reducers'
 import App from './src/App'
 
 const store = createStore(counter)
-const rootEl = document.getElementById('app')
 
 function render() {
   ReactDOM.render(
-    <App
-      store={store}
-    />,
-    rootEl
+    <App store={store} />,
+    document.getElementById('app')
   )
 }
 
