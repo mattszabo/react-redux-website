@@ -3,7 +3,8 @@ export default class NavBarData {
     return [
         {id: 1, url: '/home', text: 'Home'},
         {id: 2, url: '/todoapp', text: 'Todoapp'},
-        {id: 3, url: '/about', text: 'About'}
+        {id: 3, url: '/about', text: 'About'},
+        {id: 4, url: '/counter', text: 'Counter'}
     ];
   }
 }
