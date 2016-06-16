@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import CounterEven from '../components/CounterEven'
+import { increment, decrement } from '../actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -9,8 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onIncrement: () => dispatch({ type: 'INCREMENT_BY_TWO' }),
-    onDecrement: () => dispatch({ type: 'DECREMENT_BY_TWO' })
+    onIncrement: () => dispatch(increment()),
+    onDecrement: () => dispatch(decrement())
   }
 }
 

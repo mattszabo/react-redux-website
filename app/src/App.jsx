@@ -6,10 +6,8 @@ import Navbar from './Navbar/components/Navbar'
 const App = () => (
   <div className='app'>
     <Navbar />
-    <div className='counter'>
-      <CounterApp />
-      <CounterEvenApp />
-    </div>
+    <CounterApp />
+    <CounterEvenApp />
   </div>
 )
 App.contextTypes = {

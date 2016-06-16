@@ -3,7 +3,9 @@ import CounterEvenContainer from '../containers/CounterEvenContainer'
 
 const CounterEvenApp = () => {
   return (
-    <CounterEvenContainer  />
+    <div className='counter'>
+      <CounterEvenContainer  />
+    </div>
   );
 }
 

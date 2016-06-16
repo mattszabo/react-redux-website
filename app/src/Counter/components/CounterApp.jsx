@@ -4,7 +4,9 @@ import CounterContainer from '../containers/CounterContainer'
 class CounterApp extends React.Component {
   render() {
     return (
-      <CounterContainer />
+      <div className='counter'>
+        <CounterContainer />
+      </div>  
     )
   }
 

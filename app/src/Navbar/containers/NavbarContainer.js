@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import NavbarLink from '../components/NavbarLink'
-import updateSelection from '../actions/NavbarActions'
+import updateSelection from '../actions/'
 
 const mapStateToProps = (state, ownProps) => {
   return {
