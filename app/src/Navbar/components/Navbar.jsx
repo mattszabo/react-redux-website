@@ -5,8 +5,8 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <NavbarContainer text='Counter' id='1'/>
-        <NavbarContainer text='Counter2' id='2'/>
+        <NavbarContainer id='1'>Counter</NavbarContainer>
+        <NavbarContainer id='2'>CounterEven</NavbarContainer>
       </ul>
     </nav>
   )

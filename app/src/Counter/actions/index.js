@@ -1,13 +1,9 @@
-export const increment = (step) => {
-  return {
-    type: 'INCREMENT',
-    step
-  }
-}
+export const increment = (step) => ({
+  type: 'INCREMENT',
+  step
+})
 
-export const decrement = (step) => {
-  return {
-    type: 'DECREMENT',
-    step
-  }
-}
+export const decrement = (step) => ({
+  type: 'DECREMENT',
+  step
+})
