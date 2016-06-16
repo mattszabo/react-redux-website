@@ -1,10 +1,10 @@
 import React from 'react'
 import CounterEvenContainer from '../containers/CounterEvenContainer'
 
-const CounterEvenApp = () => {
-  return (
+const CounterEvenApp = () => (
+  <div className='counter'>
     <CounterEvenContainer  />
-  );
-}
+  </div>
+)
 
 export default CounterEvenApp

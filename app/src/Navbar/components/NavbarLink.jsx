@@ -5,17 +5,17 @@ class NavbarLink extends React.Component {
     super(props)
   }
   render() {
-    const { active, onNavbarClick } = this.props
+    const { active, onNavbarClick, children } = this.props
     let style = active ? 'active' : ''
     return (
       <li className={style}>
-        <a href='#' onClick={onNavbarClick}>{this.props.text}</a>
+        <a href='#' onClick={onNavbarClick}>{children}</a>
       </li>
     )
   }
 }
 NavbarLink.propTypes = {
-  text: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired,
   onNavbarClick: PropTypes.func.isRequired
 }

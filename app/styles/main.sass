@@ -23,11 +23,13 @@ nav
     margin-right: 20px
     &:last-child
       margin-right: 0
-  a
-    text-decoration: none
-    color: inherit
+    a
+      text-decoration: none
+      color: inherit
   .active
     color: gray
+    & a:hover
+      cursor: default
 .counter
   @extend .default
   font-size: 1.6em

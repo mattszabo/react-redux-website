@@ -7,11 +7,12 @@ const ActiveLink = ({ active, children, onClick, url='#' }) => {
   }
 
   return (
-    <Link to={url}
-       onClick={e => {
-         e.preventDefault()
-         onClick()
-       }}
+    <Link
+      to={url}
+      onClick={e => {
+        e.preventDefault()
+        onClick()
+      }}
     >
       {children}
     </Link>

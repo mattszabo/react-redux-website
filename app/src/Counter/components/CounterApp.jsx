@@ -1,13 +1,10 @@
 import React from 'react'
 import CounterContainer from '../containers/CounterContainer'
 
-class CounterApp extends React.Component {
-  render() {
-    return (
-      <CounterContainer />
-    )
-  }
-
-}
+const CounterApp = () => (
+  <div className='counter'>
+    <CounterContainer />
+  </div>
+)
 
 export default CounterApp

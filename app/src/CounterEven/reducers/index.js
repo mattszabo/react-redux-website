@@ -1,9 +1,9 @@
-const counterEven = (state = 0, action) => {
+const counterEven = (state = {value: 0}, action) => {
   switch (action.type) {
     case 'INCREMENT_BY_TWO':
-      return state + 2
+      return {...state, value: state.value + action.step}
     case 'DECREMENT_BY_TWO':
-      return state - 2
+      return {...state, value: state.value - action.step}
     default:
       return state
   }

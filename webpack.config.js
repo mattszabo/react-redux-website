@@ -98,7 +98,7 @@ switch(process.env.npm_lifecycle_event) {
 
       //more resource intensive but use it if watching stops working
       watchOptions: {
-        poll: true
+        // poll: true
       },
 
       devServer: {

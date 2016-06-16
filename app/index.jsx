@@ -15,7 +15,6 @@ const store = createStore(combineReducers({
   counterEven,
   navbar
 }))
-
 function render() {
   ReactDOM.render(
     <Provider store={store}>

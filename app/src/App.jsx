@@ -6,14 +6,9 @@ import Navbar from './Navbar/components/Navbar'
 const App = () => (
   <div className='app'>
     <Navbar />
-    <div className='counter'>
-      <CounterApp />
-      <CounterEvenApp />
-    </div>
+    <CounterApp />
+    <CounterEvenApp />
   </div>
 )
-App.contextTypes = {
-  store: React.PropTypes.object
-}
 
 export default App
