@@ -4,7 +4,7 @@ import updateSelection from '../actions/'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    active: ownProps.id === state.navbar
+    active: ownProps.id === state.navbar.selectedId
   }
 }
 

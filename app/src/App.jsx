@@ -10,8 +10,5 @@ const App = () => (
     <CounterEvenApp />
   </div>
 )
-App.contextTypes = {
-  store: React.PropTypes.object
-}
 
 export default App

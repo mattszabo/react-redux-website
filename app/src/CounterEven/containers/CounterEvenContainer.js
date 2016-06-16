@@ -4,7 +4,7 @@ import { increment, decrement } from '../actions'
 
 const mapStateToProps = (state) => {
   return {
-    value: state.counterEven
+    value: state.counterEven.value
   }
 }
 
