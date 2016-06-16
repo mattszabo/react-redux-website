@@ -1,11 +1,13 @@
-export const increment = () => {
+export const increment = (step) => {
   return {
-    type: 'INCREMENT_BY_TWO'
+    type: 'INCREMENT_BY_TWO',
+    step
   }
 }
 
-export const decrement = () => {
+export const decrement = (step) => {
   return {
-    type: 'DECREMENT_BY_TWO'
+    type: 'DECREMENT_BY_TWO',
+    step
   }
 }
