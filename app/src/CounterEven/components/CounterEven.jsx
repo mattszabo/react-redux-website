@@ -9,7 +9,7 @@ class CounterEven extends Component {
     const { value, onIncrement, onDecrement } = this.props
     return (
       <p>
-        Value: {value}
+        Current value: {value}
         {' '}
         <button onClick={onIncrement}>
           +2
