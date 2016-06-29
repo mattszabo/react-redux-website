@@ -5,7 +5,7 @@ import Counter from '../../Counter/components/Counter'
 
 const CounterContainer = React.createClass({
   render() {
-    const { counter } = this.props
+    const { counter, i } = this.props
     return (
       <figure className='grid-figure'>
         <div className='grid-counter-wrap'>
@@ -14,6 +14,12 @@ const CounterContainer = React.createClass({
           </Link>
           <p>Value: {counter.value}</p>
         </div>
+        <figcaption>
+          <div className='control-buttons'>
+            <button onClick={this.props.incrementCounter.bind(null, i)} className='likes'>+</button>
+            <button onClick={this.props.decrementCounter.bind(null, i)} className='likes'>-</button>
+          </div>
+        </figcaption>
       </figure>
     )
   }
