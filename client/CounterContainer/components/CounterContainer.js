@@ -11,8 +11,8 @@ const CounterContainer = React.createClass({
         <div className='grid-counter-wrap'>
           <Link to={`/counter/${counter.id}`}>
             <h2>{counter.label}</h2>
-            <p>Value: {counter.value}</p>
           </Link>
+          <p>Value: {counter.value}</p>
         </div>
       </figure>
     )
