@@ -1,32 +1,32 @@
 {
-  // Extend existing configuration
-  // from ESlint and eslint-plugin-react defaults.
-  "extends": [
-    "eslint:recommended", "plugin:react/recommended"
-  ],
-  // Enable ES6 support. If you want to use custom Babel
-  // features, you will need to enable a custom parser
-  // as described in a section below.
-  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
   "env": {
     "browser": true,
     "node": true,
     "es6": true
   },
-  // Enable custom plugin known as eslint-plugin-react
-  "plugins": [
-    "react"
+  "extends": [
+    "plugin:react/recommended"
   ],
+  "parser": "babel-eslint",
+
   "rules": {
-    // Disable `no-console` rule
-    "no-console": 0,
-    // Should allow underscores if preceeded by this.
-    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
-    // Default to single quotes and raise an error if something
-    // else is used
-    "quotes": [2, "single"]
+    "quotes": [2, "single"],
+    "strict": [2, "never"],
+    "babel/generator-star-spacing": 1,
+    "babel/new-cap": 1,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
+    "babel/no-await-in-loop": 1,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2
   },
-  "sort-imports": ["error", {
-    "ignoreCase": false
-  }]
+  "plugins": [
+    "babel",
+    "react"
+  ]
 }
