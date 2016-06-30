@@ -3,7 +3,6 @@ import React, { PropTypes } from 'react';
 class AddCounter extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.refs);
     const label = this.refs.label.value;
     const step = this.refs.step.value;
     const counterId = Date.now();

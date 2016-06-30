@@ -8,7 +8,8 @@ class Main extends React.Component {
         <h1>
           <Link to='/'>CounterApp</Link>
         </h1>
-        {React.cloneElement(this.props.children, this.props)}
+        {React.cloneElement(this.props.children,
+          { ...this.props, key: undefined, ref: undefined })}
       </div>
     )
   }
