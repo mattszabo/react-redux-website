@@ -1,6 +1,6 @@
 // only updates the counter object that was clicked
 const counter = (state = [], action) => {
-  const { id, step, type } = action;
+  const { step, type } = action;
 
   switch (type) {
     case 'INCREMENT_COUNTER':
@@ -10,11 +10,9 @@ const counter = (state = [], action) => {
         return {...state, value: state.value - step};
 
     case 'ADD_COUNTER':
-    console.log('state');
-    constole.log(state);
       return {
         label: action.label,
-        step: action.step,
+        step: parseInt(action.step),
         value: 0,
         counters: {}
       };

@@ -14,11 +14,12 @@ function decrementCounter(id, step) {
   }
 }
 
-function addCounter(label, step) {
+function addCounter(id, label, step) {
   return {
     type: 'ADD_COUNTER',
     label,
-    step
+    step,
+    id
   }
 }
 
