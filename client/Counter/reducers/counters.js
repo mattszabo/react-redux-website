@@ -1,14 +1,7 @@
-const findIndexFromId = (state = [], id) => {
-  for(let i=0; i < state.length; i++) {
-    if(id === state[i].id) {
-      return i;
-    }
-  }
-}
-
+import { findIndexFromId } from '../utils/counterUtils'
 
 const counters = (state = [], action) => {
-  const { id, step, type } = action;
+  const { id, step, type, label, value } = action;
   const i = findIndexFromId(state, id);
   switch (type) {
 
@@ -44,8 +37,13 @@ const counters = (state = [], action) => {
         ...state.slice(i+1)
       ]
 
-    case 'EDIT_COUNTER_STEP':
-      return state;
+    case 'UPDATE_COUNTER':
+    console.log(action);
+    return [
+      ...state.slice(0,i),
+      {...state[i], value: parseInt(value), label, step: parseInt(step)},
+      ...state.slice(i+1)
+    ];
 
     default:
       return state;

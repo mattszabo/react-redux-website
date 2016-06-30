@@ -30,11 +30,13 @@ function removeCounter(id) {
   }
 }
 
-function editCounterStep(id, step) {
+function updateCounter(id, label, step, value) {
   return {
-    type: 'EDIT_COUNTER_STEP',
+    type: 'UPDATE_COUNTER',
     id,
-    step
+    label,
+    step,
+    value
   }
 }
 
@@ -43,5 +45,5 @@ export {
   decrementCounter,
   addCounter,
   removeCounter,
-  editCounterStep
+  updateCounter
 };
