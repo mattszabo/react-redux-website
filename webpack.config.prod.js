@@ -34,9 +34,9 @@ module.exports = {
     },
     // CSS
     {
-      test: /\.styl$/,
+      test: /\.sass$/,
       include: path.join(__dirname, 'client'),
-      loader: 'style-loader!css-loader!stylus-loader'
+      loader: 'style-loader!css-loader!sass?indentedSyntax=true'
     }
     ]
   }
