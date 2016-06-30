@@ -1,82 +1,76 @@
-const counters = [
-  {
-    id: 1467199883412,
-    label: 'label-1',
+const counters = {
+    1467199883401: {
+    label: 'Label-01',
     step: 1,
-    value: 0
+    value: 0,
+    counters: {}
   },
-  {
-    id: 1467199883413,
-    label: 'label-2',
+  1467199883402: {
+    label: 'Label-02',
     step: 2,
-    value: 0
+    value: 0,
+    counters: {}
   },
-  {
-    id: 1467199883414,
-    label: 'label-3',
+  1467199883403: {
+  label: 'Label-03',
+  step: 1,
+  value: 0,
+  counters: {}
+  },
+  1467199883404: {
+    label: 'Label-04',
+    step: 2,
+    value: 0,
+    counters: {}
+  },
+  1467199883405: {
+    label: 'Label-05',
     step: 1,
-    value: 0
+    value: 0,
+    counters: {}
   },
-  {
-    id: 1467199883415,
-    label: 'label-4',
+  1467199883406: {
+    label: 'Label-06',
     step: 2,
-    value: 0
+    value: 0,
+    counters: {}
   },
-  {
-    id: 1467199883416,
-    label: 'label-5',
+  1467199883407: {
+  label: 'Label-07',
+  step: 1,
+  value: 0,
+  counters: {}
+  },
+  1467199883408: {
+    label: 'Label-08',
+    step: 2,
+    value: 0,
+    counters: {}
+  },
+  1467199883409: {
+    label: 'Label-09',
     step: 1,
-    value: 0
+    value: 0,
+    counters: {}
   },
-  {
-    id: 1467199883417,
-    label: 'label-6',
+  1467199883410: {
+    label: 'Label-10',
     step: 2,
-    value: 0
+    value: 0,
+    counters: {}
   },
-  {
-    id: 1467199883418,
-    label: 'label-7',
-    step: 1,
-    value: 0
+  1467199883411: {
+  label: 'Label-11',
+  step: 1,
+  value: 0,
+  counters: {}
   },
-  {
-    id: 1467199883419,
-    label: 'label-8',
+  1467199883412: {
+    label: 'Label-12',
     step: 2,
-    value: 0
-  },
-  {
-    id: 1467199883420,
-    label: 'label-9',
-    step: 2,
-    value: 0
-  },
-  {
-    id: 1467199883421,
-    label: 'label-10',
-    step: 2,
-    value: 0
-  },
-  {
-    id: 1467199883422,
-    label: 'label-11',
-    step: 2,
-    value: 0
-  },
-  {
-    id: 1467199883423,
-    label: 'label-12',
-    step: 2,
-    value: 0
-  },
-  {
-    id: 1467199883424,
-    label: 'label-13',
-    step: 2,
-    value: 0
+    value: 0,
+    counters: {}
   }
-];
+};
 
 export default counters;

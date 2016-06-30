@@ -1,30 +1,40 @@
-function incrementCounter(counterId, step) {
-  type: 'INCREMENT_COUNTER',
-  counterId,
-  step
+function incrementCounter(id, step) {
+  return {
+    type: 'INCREMENT_COUNTER',
+    id,
+    step
+  }
 }
 
-function decrementCounter(counterId, step) {
-  type: 'DECREMENT_COUNTER',
-  counterId,
-  step
+function decrementCounter(id, step) {
+  return {
+    type: 'DECREMENT_COUNTER',
+    id,
+    step
+  }
 }
 
 function addCounter(label, step) {
-  type: 'ADD_COUNTER',
-  label,
-  step
+  return {
+    type: 'ADD_COUNTER',
+    label,
+    step
+  }
 }
 
-function removeCounter(counterId) {
-  type: 'REMOVE_COUNTER',
-  counterId
+function removeCounter(id) {
+  return {
+    type: 'REMOVE_COUNTER',
+    id
+  }
 }
 
-function editCounterStep(counterId, step) {
-  type: 'EDIT_COUNTER_STEP',
-  counterId,
-  step
+function editCounterStep(id, step) {
+  return {
+    type: 'EDIT_COUNTER_STEP',
+    id,
+    step
+  }
 }
 
 export {

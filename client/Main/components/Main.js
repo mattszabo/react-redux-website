@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Main = React.createClass({
+class Main extends React.Component {
   render() {
     return (
       <div className='main'>
         <h1>
           <Link to='/'>CounterApp</Link>
         </h1>
-        {React.cloneElement(this.props.children, this.props)}
+        {React.cloneElement(this.props.children, {...this.props, key: undefined, ref: undefined})}
       </div>
     )
   }
-});
+}
 
 Main.propTypes = {
   children: React.PropTypes.oneOfType([
