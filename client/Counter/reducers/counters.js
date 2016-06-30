@@ -1,24 +1,48 @@
-// only updates the counter object that was clicked
-const counter = (state = [], action) => {
-  const { step, type } = action;
+const findIndexFromId = (state = [], id) => {
+  for(let i=0; i < state.length; i++) {
+    if(id === state[i].id) {
+      return i;
+    }
+  }
+}
 
+
+const counters = (state = [], action) => {
+  const { id, step, type } = action;
+  const i = findIndexFromId(state, id);
   switch (type) {
+
     case 'INCREMENT_COUNTER':
-      return {...state, value: state.value + step};
+      return [
+        ...state.slice(0,i),
+        {...state[i], value: state[i].value + step},
+        ...state.slice(i+1)
+      ];
 
     case 'DECREMENT_COUNTER':
-        return {...state, value: state.value - step};
+      return [
+        ...state.slice(0,i),
+        {...state[i], value: state[i].value - step},
+        ...state.slice(i+1)
+      ];
 
     case 'ADD_COUNTER':
-      return {
-        label: action.label,
-        step: parseInt(action.step),
-        value: 0,
-        counters: {}
-      };
+      return [
+        ...state,
+        {
+          id: Date.now(),
+          label: action.label,
+          step: parseInt(action.step),
+          value: 0,
+          counters: []
+        }
+      ];
 
     case 'REMOVE_COUNTER':
-      return state;
+      return [
+        ...state.slice(0,i),
+        ...state.slice(i+1)
+      ]
 
     case 'EDIT_COUNTER_STEP':
       return state;
@@ -26,17 +50,6 @@ const counter = (state = [], action) => {
     default:
       return state;
   }
-}
-
-function counters(state = [], action) {
-  if(typeof action.id !== 'undefined') {
-    const { id } = action;
-    return {
-      ...state,
-      [id]: counter(state[id], action)
-    }
-  }
-  return state;
 }
 
 export default counters
