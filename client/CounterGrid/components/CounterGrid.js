@@ -9,9 +9,7 @@ class CounterGrid extends React.Component {
     const { counters } = this.props;
     return (
       <div>
-        <div className='add-counter'>
-          <AddCounter {...this.props} />
-        </div>
+        <AddCounter {...this.props} />
         <div className='counter-grid'>
           {counters.map((counter) => {
             return <Counter

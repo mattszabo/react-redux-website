@@ -1,9 +1,10 @@
 @import 'reset.sass'
+$bg-color: ALICEBLUE
 html
   font-size: 10px
   -webkit-font-smoothing: antialiased
 body
-  background: lightblue
+  background: $bg-color
   font-size: 1.6rem
   font-family: 'Montserrat', sans-serif
 h1
@@ -23,22 +24,23 @@ h1
   a
     text-decoration: none
     color: inherit
-
-.grid-counter-wrap
-  margin: 20px
+.grid-counter
+  position: relative
+  margin: 0
   padding: 10px
-  border: 1px solid black
+  min-width: 125px
   h2
-    font-size: 2.4rem
+    font-size: 1.6rem
     font-weight: bold
     border-bottom: 1px solid black
   p
     text-align: center
     padding-top: 20px
+    font-size: 6rem
+    font-family: monospace
 .grid-figure
   border: 1px solid black
   margin: 20px
-
 .main-menu
   margin: 40px
   a
@@ -48,18 +50,17 @@ h1
 .remove-counter
   text-align: right
   cursor: pointer
-
-.add-counter
+.counter-form
   margin: 0 40px
   input[type="text"]
     padding: 13px 20px
     border: solid 1px #fff
-    box-shadow: inset 1px 1px 2px 0 #707070
+    box-shadow: inset 1px 1px 2px 0 #c9c9c9
     transition: box-shadow 0.3s
     transition: border 0.3s
   input[type="text"]:focus,
   input[type="text"].focus
-    box-shadow: inset 1px 1px 2px 0 #c9c9c9
+    box-shadow: inset 1px 1px 2px 0 #707070
     outline: #c9c9c9 solid thin
 .button
   display: inline-block
@@ -75,8 +76,20 @@ h1
   text-transform: uppercase
   Transition: background-color 0.1s ease-out
   transform: translateZ(0)
-  outline: 90px solid transparent!important
-  -webkit-filter: url("#filter")
-  filter: url("/#filter")
+  outline: 90px solid transparent
+  &.counter-button
+    border: 0
+    padding: 10px 0
+    margin: 0
+    width: 50%
+    border-right: 1px solid white
+    cursor: pointer
+    font-family: monospace
+    &:hover
+      background-color: #0099cc
+    &:last-child
+      border-right: 0
+    span
+      padding: 0 10px
 .button:hover
   background-color: #2CD892

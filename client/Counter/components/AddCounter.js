@@ -13,14 +13,14 @@ class AddCounter extends React.Component {
   render() {
     return (
       <div>
-        Add a counter:
         <form
           ref='addCounterForm'
-          className='add-counter-form'
+          className='counter-form'
           onSubmit={this.handleSubmit.bind(this)}>
-          <input type='text' ref='label' placeholder='label' />
-          <input type='text' ref='step' placeholder='step' />
-          <input type='submit' value='Add Counter' className='button'/>
+            <p>Add a counter:</p>
+            <input type='text' ref='label' placeholder='label' />
+            <input type='text' ref='step' placeholder='step' />
+            <input type='submit' value='Add Counter' className='button'/>
         </form>
       </div>
     );

@@ -4,15 +4,15 @@ class CounterButtons extends React.Component {
   render() {
     const { counterId, step } = this.props
     return (
-      <div className='counter-buttons'>
+      <div>
         <button
+          className='button counter-button'
           onClick={this.props.incrementCounter.bind(null, counterId, step)}
-          className='likes'
-        >+{step}</button>
+        ><span>+{step}</span></button>
         <button
+          className='button counter-button'
           onClick={this.props.decrementCounter.bind(null, counterId, step)}
-          className='likes'
-        >-{step}</button>
+        ><span>-{step}</span></button>
       </div>
     )
   }

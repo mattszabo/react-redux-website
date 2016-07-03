@@ -23,16 +23,16 @@ class CounterInspector extends React.Component {
     const index = findIndexFromId(counters, counterId)
     const counter = counters[index];
     return (
-      <figure className='grid-figure'>
+      <figure className='counter-form'>
         I'm a counter inspector for counterId: {counterId}
         <form
           ref='counterInspectorForm'
           className='counter-inspector-form'
           onSubmit={this.handleSubmit.bind(this)} >
-          Label: <input type='text' ref='label' placeholder={counter.label} />
-          Step: <input type='text' ref='step' placeholder={counter.step} />
-          Value: <input type='text' ref='value' placeholder={counter.value} />
-          <input type='submit' value='update' />
+          Label: <input type='text' ref='label' defaultValue={counter.label} />
+          Step: <input type='text' ref='step' defaultValue={counter.step} />
+          Value: <input type='text' ref='value' defaultValue={counter.value} />
+        <input className='button' type='submit' value='update' />
         </form>
       </figure>
     )
