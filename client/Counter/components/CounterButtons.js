@@ -6,11 +6,11 @@ class CounterButtons extends React.Component {
     return (
       <div>
         <button
-          className='button counter-button'
+          className='button counter-button button-blue'
           onClick={this.props.incrementCounter.bind(null, counterId, step)}
         ><span>+{step}</span></button>
         <button
-          className='button counter-button'
+          className='button counter-button button-red'
           onClick={this.props.decrementCounter.bind(null, counterId, step)}
         ><span>-{step}</span></button>
       </div>

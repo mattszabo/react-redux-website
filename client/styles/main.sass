@@ -29,39 +29,18 @@ h1
   margin: 0
   padding: 10px
   min-width: 125px
+  background: #aaa
   h2
     font-size: 1.6rem
     font-weight: bold
     border-bottom: 1px solid black
+    &:hover
+      color: ALICEBLUE
   p
     text-align: center
-    padding-top: 20px
+    padding: 20px
     font-size: 6rem
     font-family: monospace
-.grid-figure
-  border: 1px solid black
-  margin: 20px
-.main-menu
-  margin: 40px
-  a
-    text-decoration: none
-    margin-right: 20px
-    border-bottom: 1px solid black
-.remove-counter
-  text-align: right
-  cursor: pointer
-.counter-form
-  margin: 0 40px
-  input[type="text"]
-    padding: 13px 20px
-    border: solid 1px #fff
-    box-shadow: inset 1px 1px 2px 0 #c9c9c9
-    transition: box-shadow 0.3s
-    transition: border 0.3s
-  input[type="text"]:focus,
-  input[type="text"].focus
-    box-shadow: inset 1px 1px 2px 0 #707070
-    outline: #c9c9c9 solid thin
 .button
   display: inline-block
   -webkit-font-smoothing: antialiased
@@ -85,11 +64,61 @@ h1
     border-right: 1px solid white
     cursor: pointer
     font-family: monospace
-    &:hover
-      background-color: #0099cc
+    &.button-blue:hover
+      background-color: #2CD892
+    &.button-red:hover
+      background-color: #aa2233
     &:last-child
       border-right: 0
     span
       padding: 0 10px
 .button:hover
-  background-color: #2CD892
+  background-color: #0099cc
+.grid-figure
+  border: 1px solid black
+  margin: 20px
+.main-menu
+  margin: 40px
+  a
+    text-decoration: none
+    margin-right: 20px
+    border-bottom: 1px solid black
+.counter-header
+  background: #222
+  color: white
+  .remove-counter
+    text-align: right
+    &:hover
+      color: #dd2233
+      cursor: pointer
+.counter-form
+  margin: 0 40px
+  input[type="text"]
+    padding: 13px 20px
+    border: solid 1px #fff
+    box-shadow: inset 1px 1px 2px 0 #c9c9c9
+    transition: box-shadow 0.3s
+    transition: border 0.3s
+  input[type="text"]:focus,
+  input[type="text"].focus
+    box-shadow: inset 1px 1px 2px 0 #707070
+    outline: #c9c9c9 solid thin
+  &.inpsect-counter-form
+    h2
+      text-align: center
+      margin: 20px auto
+      font-size: 2.6rem
+      strong
+        font-weight: bolder
+    label
+      display: inline-block
+      float: left
+      clear: left
+      width: 100px
+      text-align: right
+      padding: 15px
+    input
+      display: inline-block
+      float: left
+    .button
+      display: block
