@@ -2,15 +2,14 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import Counter from '../../Counter/components/Counter';
+import AddCounter from '../../Counter/components/AddCounter'
 
 class CounterGrid extends React.Component {
   render() {
     const { counters } = this.props;
     return (
       <div>
-        <h2 className='main-menu'>
-          <Link to='/addCounter'>Add Counter</Link>
-        </h2>
+        <AddCounter {...this.props} />
         <div className='counter-grid'>
           {counters.map((counter) => {
             return <Counter

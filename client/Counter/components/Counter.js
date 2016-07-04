@@ -13,12 +13,16 @@ class Counter extends React.Component {
     const { counterId, counter } = this.props;
     return (
       <figure className='grid-figure'>
-        <div className='remove-counter' onClick={this.handleClick.bind(this)}>&times;</div>
-        <div className='grid-counter-wrap'>
+        <div className='counter-header'>
+          <div className='remove-counter'>
+            <a onClick={this.handleClick.bind(this)}>&times;</a>
+          </div>
+        </div>
+        <div className='grid-counter'>
           <Link to={`/counter/${counterId}`}>
             <h2>{counter.label}</h2>
           </Link>
-          <p>{counter.value}</p>
+          <p className='likes-heart'>{counter.value}</p>
         </div>
         <figcaption>
           <CounterButtons {...this.props} counterId={counterId} step={counter.step}/>
