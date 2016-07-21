@@ -10,8 +10,10 @@ class CounterGrid extends React.Component {
     return (
       <div>
         <AddCounter {...this.props} />
-        <div className='counter-grid'>
+        <div className='counter-grid-help'>
           <p>Click a counter label to edit that counters details</p>
+        </div>
+        <div className='counter-grid'>
           {counters.map((counter) => {
             return <Counter
               {...this.props}
