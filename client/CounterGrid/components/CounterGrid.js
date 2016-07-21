@@ -11,6 +11,7 @@ class CounterGrid extends React.Component {
       <div>
         <AddCounter {...this.props} />
         <div className='counter-grid'>
+          <p>Click a counter label to edit that counters details</p>
           {counters.map((counter) => {
             return <Counter
               {...this.props}
