@@ -6,7 +6,7 @@ class Main extends React.Component {
     return (
       <div className='main'>
         <h1>
-          <Link to='/'>CounterApp</Link>
+          <Link to='/'>Redux CounterApp</Link>
         </h1>
         {React.cloneElement(this.props.children,
           { ...this.props, key: undefined, ref: undefined })}
